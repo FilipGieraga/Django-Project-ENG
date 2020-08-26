@@ -1,0 +1,76 @@
+* {
+	color: #261B0D;
+	font-family: 'Russo One', sans-serif;
+	font-weight: bold;
+        }
+
+html, body{
+    height:100%;
+    margin:0;
+            }
+
+body{
+  display:flex;
+  flex-direction:column;
+}
+
+.navbar-custom{
+    background-color: #D9C299;
+    border-bottom: #DAB447 3px solid;
+            }
+
+.hello{
+    color: #73653D;
+}
+
+
+footer{
+	background-color: #D9C299;
+	padding: 10px;
+	margin-top:auto;
+	border-top: #DAB447 3px solid;
+}
+footer h3{
+	font-size:20px;
+}
+
+.nav-item :hover{
+    color: #8C5230;
+
+    }
+.nav-link{
+    color: #261B0D;
+}
+
+.custom-tr{
+    background-color: #73653D;
+}
+
+.btn-custom{
+    border-color: #73653D;
+    color: #8C5230;
+    }
+
+.btn-custom :hover{
+    background-color:green;
+    color: white;
+    }
+
+.card-header{
+    background-color: #D9C299;
+}
+
+.col-md-10 .card-body{
+    background-color: #bfae7a;
+}
+
+#messages{
+			background-color: grey;
+			color: #fff;
+			padding: 10px;
+			margin-top: 10px;
+		}
+
+
+
+

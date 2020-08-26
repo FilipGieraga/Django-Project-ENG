@@ -1,0 +1,44 @@
+{% load static %}
+<div class="row my-5 w-75 mx-auto">
+	<div class="col">
+		<div class="col-md-10">
+			<div class="card text-center text-white  mb-3" id="total-orders">
+			  	<div class="card-header pt-3">
+			  		<h5 class="card-title">TOTAL BOOKS</h5>
+			  	</div>
+			  	<div class="card-body">
+			    	<h3 class="card-title">{{stored_books.quantity__sum}}</h3>
+			  	</div>
+			</div>
+			<center><p>Quantity of all books on library shelfs</p></center>
+		</div>
+	</div>
+
+	<div class="col">
+		<div class="col-md-10">
+			<div class="card text-center text-white  mb-3" id="orders-delivered">
+			  	<div class="card-header pt-3">
+			  		<h5 class="card-title">BOOKS TITLES</h5>
+			  	</div>
+			  	<div class="card-body">
+			    	<h3 class="card-title">{{counter}}</h3>
+			  	</div>
+			</div>
+			<center><p>Unique books</p></center>
+		</div>
+	</div>
+
+	<div class="col">
+		<div class="col-md-10">
+			<div class="card text-center mb-3" id="orders-pending">
+			  	<div class="card-header pt-3">
+			  		<h5 class="card-title">Borrowed books</h5>
+			  	</div>
+			  	<div class="card-body">
+			    	<h3 class="card-title">{{borrowed}}</h3>
+			  	</div>
+			</div>
+			<center><p>All books borrowed by users</p></center>
+		</div>
+	</div>
+</div>

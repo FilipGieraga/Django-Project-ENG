@@ -1,0 +1,36 @@
+{%  extends 'rental/main.html' %}
+
+{% block content %}
+
+<div class="container my-5">
+    <center><h2 class="py-4">Currently borrowed books: {{counter}}</h2></center>
+
+    {% for message in messages %}
+    <center><p id="messages">{{message}}</p></center>
+    {% endfor %}
+
+    <table class="table">
+        <tr class="custom-tr">
+            <th>Book title</th>
+            <th>Authors</th>
+            <th>Taken date</th>
+            <th>Return date</th>
+            <th></th>
+        </tr>
+        {% for b in borrowed%}
+
+        <tr>
+            <td>{{b.book}}</td>
+            <td>{{b.book.authors}}</td>
+            <td>{{b.taken_date}}</td>
+            <td>{{b.return_date}}</td>
+            <td><a class="btn btn-sm btn-block btn-custom" href="{% url 'return' b.id %}">Return</a></td>
+            {% empty %}
+            <center><h3 class="py-3">No books borrowed at the moment</h3></center>
+
+            {%endfor%}
+        </tr>
+    </table>
+</div>
+
+{% endblock %}

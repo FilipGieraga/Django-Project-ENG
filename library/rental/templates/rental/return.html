@@ -1,0 +1,20 @@
+{%  extends 'rental/main.html' %}
+
+{% block content %}
+
+<div class="container my-5">
+    <div class="center-column">
+
+        <center><h2 class="text-dark">Are you sure you want to return "{{borrowed.book}}?"</h2></center>
+        <br>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <center><input type="submit" class="btn btn-sm btn-info" name="Confirm"></center>
+        </form>
+        <br>
+        <center><a class="btn btn-sm btn-danger" href="{% url 'user' %}">Cancel</a></center>
+
+    </div>
+</div>
+
+{% endblock %}

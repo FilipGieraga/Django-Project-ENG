@@ -1,0 +1,50 @@
+{%  extends 'rental/main.html' %}
+{% block content %}
+
+
+<br>
+
+<div class="container my-5">
+    {% for message in messages %}
+    <center><p id="messages">{{message}}</p></center>
+    {% endfor %}
+    <center><h2>Welcome to my simple library project !</h2></center>
+</div>
+
+
+<br>
+
+<div class="container">
+
+
+
+        <p>This project is made fully by me in order to practice my django skills. I tried to test features that I
+            learned
+            from different courses on Youtube and a book that I read.
+            <br>
+            This library has: </p>
+        <ul>
+            <li>Administrator Panel with books, users, profiles and borrowed books</li>
+            <li>Page to login</li>
+            <li>Page to logout</li>
+            <li>Registration site</li>
+            <li>Paginations for books section</li>
+            <li>Profile accessibility for all new users</li>
+            <li>Custom views, functionalities and messages for logged in users</li>
+            <li>DB with a variety of books, imported from CSV file</li>
+            <li>Possibility for users to borrow books for a limited amount of time(i.e. 3 months)</li>
+            <li>Possibility for users to return books</li>
+            <li>Book counter for library and custom counter for users</li>
+
+        </ul>
+
+
+
+
+</div>
+
+{% include 'rental/status.html' %}
+
+
+{% endblock %}
+

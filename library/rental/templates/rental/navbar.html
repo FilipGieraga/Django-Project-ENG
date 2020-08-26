@@ -1,0 +1,29 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <a href="{% url 'homepage' %}"><img src="{% static 'images/logo.png' %}" height="50"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'homepage' %}">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'all_books' %}">Books</a>
+            </li>
+        </ul>
+    </div>
+    {% if user.is_authenticated %}
+    <span><a class="nav-link" href="{% url 'user' %}">My books</a></span>
+    <span><a class="nav-link" href="{% url 'profile' %}">My profile</a></span>
+    <span><a class="nav-link" href="{% url 'logout' %}">Logout</a></span>
+    <span class="hello">Hello, {{request.user}}</span>
+    {% else %}
+    <span><a class="nav-link" href="{% url 'register' %}">Register</a></span>
+    <span><a class="nav-link" href="{% url 'login' %}">Login</a></span>
+    {% endif %}
+</nav>

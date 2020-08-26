@@ -1,0 +1,55 @@
+{%  extends 'rental/main.html' %}
+
+{% block content %}
+<br>
+
+<div class="row">
+    <div class="col-md my-3">
+
+        <h2 class="text-center">Books</h2>
+
+        <div class="card card-body mt-5">
+            <table class="table">
+                <tr class="custom-tr">
+                    <th>Book title</th>
+                    <th>Authors</th>
+                    <th>Number of pages</th>
+                    <th>Average Rating</th>
+                    {% if user.is_authenticated %}
+                    <th></th>
+                    {% endif %}
+                </tr>
+
+                {% for book in books %}
+                <tr>
+                    <td><a href="{% url 'book_details' book.id %}">{{book.title}}</a></td>
+                    <td>{{book.authors}}</td>
+                    <td>{{book.num_pages}}</td>
+                    <td>{{book.average_rating}}</td>
+                    {% if book in list %}
+                    <td><a class="btn btn-sm btn-block btn-custom" href="{% url 'user' %}">Return</a></td>
+                    {% elif user.is_authenticated %}
+                    <td><a class="btn btn-sm btn-block btn-custom" href="{% url 'borrow' book.id %}">Borrow</a></td>
+                    {% endif %}
+
+                </tr>
+                {% endfor %}
+
+            </table>
+        </div>
+    </div>
+
+</div>
+<div class="container  py-3">
+    <center>
+        {% if books.has_previous %}
+        <a class="px-4" href="{% url 'all_books' %}?page={{books.previous_page_number }}"><<  Previous Page</a>
+        {% endif %}
+        {% if books.has_next %}
+        <a class="px-4" href="{% url 'all_books' %}?page={{books.next_page_number }}">Next Page  >></a>
+        {% endif %}
+    </center>
+</div>
+
+
+{% endblock %}
