@@ -12,4 +12,6 @@ Site has fully working admin panel. <br>
 <br>
 ### <a href="http://filipgieraga.pythonanywhere.com/" target="_blank">Access website here!</a>
 
+Access website [here](http://filipgieraga.pythonanywhere.com/){:target="_blank"}
+
 
