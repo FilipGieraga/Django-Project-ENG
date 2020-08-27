@@ -11,6 +11,6 @@ In order to login and test feautures you can make a dummy account or use existin
 
 Site has fully working admin panel. <br>
 <br>
-Click **here[website]** to access website.
+Click **[here]** to access website.
 
-[website]: http://filipgieraga.pythonanywhere.com/
+[here]: http://filipgieraga.pythonanywhere.com/
