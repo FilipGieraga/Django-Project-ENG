@@ -9,5 +9,8 @@ In order to login and test feautures you can make a dummy account or use existin
 **Password** : haslo123
 
 
-Site has fully working admin panel.<br>
+Site has fully working admin panel. <br>
+<br>
+Click **here[website]** to access website.
 
+[website]: http://filipgieraga.pythonanywhere.com/
